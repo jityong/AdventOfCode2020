@@ -3,15 +3,16 @@ class Day4:
     # https://adventofcode.com/2020/day/4 
     # Regex & parsing input
     def __init__(self):
-        self.fields = ({'byr':lambda x: len(x) == 4 and int(x) >= 1920 and int(x) <= 2002,
-        'iyr':lambda x: len(x) == 4 and int(x) >= 2010 and int(x) <= 2020,
-        'eyr':lambda x: len(x) ==4 and int(x) >= 2020 and int(x) <= 2030, 
-        'hgt':lambda x: self.validateHgt(x),
-        'hcl':lambda x: re.fullmatch(r'#[0-9a-f]{6}', x) != None, 
-        'ecl':lambda x: x in {'amb','blu','brn','gry','grn','hzl','oth'},
-        'pid':lambda x: re.fullmatch(r'[0-9]{9}', x) != None,
-        # 'cid':lambda x: True
-        })
+        self.fields = {
+            'byr':lambda x: len(x) == 4 and int(x) >= 1920 and int(x) <= 2002,
+            'iyr':lambda x: len(x) == 4 and int(x) >= 2010 and int(x) <= 2020,
+            'eyr':lambda x: len(x) == 4 and int(x) >= 2020 and int(x) <= 2030, 
+            'hgt':lambda x: self.validateHgt(x),
+            'hcl':lambda x: re.fullmatch(r'#[0-9a-f]{6}', x) != None, 
+            'ecl':lambda x: x in {'amb','blu','brn','gry','grn','hzl','oth'},
+            'pid':lambda x: re.fullmatch(r'[0-9]{9}', x) != None,
+            # 'cid':lambda x: True
+        }
     
     def validateHgt(self, s):
         if len(s) <= 2:
@@ -36,20 +37,19 @@ class Day4:
                 return False 
             if not validate(s_fields[field]):
                 return False
-        print(s)
         return True
     
 
 fo = open("../inputs/day4input.txt", "r+")
 arr = []
 curr_arr = []
+### Parse input
 for line in fo:
     if line == '\n':
         arr.append(curr_arr)
         curr_arr = []
     else:
         curr_arr += line.split(" ")
-
 if curr_arr:
     arr.append(curr_arr)
 
