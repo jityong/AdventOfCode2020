@@ -10,6 +10,7 @@ class Day6:
 
         return result
 
+    # O(N) time, O(26) space. Where N is the total number of passengers 
     def count_sum_part2(self, arrs):
         result = 0
         for arr in arrs:
