@@ -1,4 +1,5 @@
 from collections import defaultdict
+
 class Day1:
     # hashmap approach, O(n) time & space
     def find2Sum(self, target, arr, l):
