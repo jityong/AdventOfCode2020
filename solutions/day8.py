@@ -1,6 +1,8 @@
 from collections import defaultdict
 class Day8:
     # https://adventofcode.com/2020/day/8#part2
+    # Part1 -> O(V) time; each instruction visited at most once 
+    # Part2 -> O(V+E); DFS
     def detect_loop(self, arr):
         visited = set()
         i = 0
