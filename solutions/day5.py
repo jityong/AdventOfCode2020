@@ -32,7 +32,7 @@ fo = open("../inputs/day5input.txt", "r+")
 arr = fo.read().splitlines()    
 day5 = Day5()
 
-print(day5.findSeat(arr))
+print(day5.find_seat(arr))
 
 
 
