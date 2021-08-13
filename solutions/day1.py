@@ -25,7 +25,7 @@ class Day1:
             return []
 
 ### Read input
-fo = open("day1input.txt", "r+")
+fo = open("../inputs/day1input.txt", "r+")
 arr = fo.read().splitlines()        
 arr = list(map(lambda x: int(x), arr))
 

@@ -26,7 +26,7 @@ class Day2:
         isSecondPosValid = second_pos < len(password) + 1 and password[second_pos-1] == char
         return isFirstPosValid ^ isSecondPosValid
 
-fo = open("day2input.txt", "r+")
+fo = open("../inputs/day2input.txt", "r+")
 arr = fo.read().splitlines()    
 day2 = Day2()
 
