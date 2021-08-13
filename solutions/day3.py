@@ -1,5 +1,6 @@
 class Day3:
     # O(n+m) solution, where n is the num of rows and m is the number of columns
+    # https://adventofcode.com/2020/day/3
     def __init__(self, arr): 
         self.num_rows = len(arr)
         self.num_cols = len(arr[0])
