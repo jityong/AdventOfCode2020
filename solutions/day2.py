@@ -1,4 +1,5 @@
 from collections import defaultdict
+
 class Day2:
     def parseInput(self, s): 
         rule, password = s.split(":")
