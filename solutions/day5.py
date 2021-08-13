@@ -10,7 +10,7 @@ class Day5:
         else:
             return self.binary_search(mid + 1, r, directions, idx+1)
 
-    def find_seat(self, direction):
+    def find_seat(self, arr):
         highest_result = 0
         lowest_result = 1000
         curr_sum = 0
