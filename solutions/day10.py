@@ -15,16 +15,13 @@ class Day10:
                 num_three_diff += 1
         return num_one_diff * num_three_diff 
     
+    # O(n^2) time complexity 
     def part_2(self):
         dp = [0] * len(self.arr)
         dp[0] = 1
-        i = 0
         for i in range(len(self.arr)):            
-            j = i
-            val = self.arr[j]
-            result = 0
-            j -= 1
-            while j >= 0 and val - self.arr[j] <= 3:
+            j = i-1
+            while j >= 0 and self.arr[i] - self.arr[j] <= 3:
                 dp[i] += dp[j]
                 j -= 1            
         return dp[len(self.arr)-1]
