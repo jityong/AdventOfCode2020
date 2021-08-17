@@ -4,11 +4,11 @@ class Day12:
     def enum_direction(self, s):
         if s == 'N':
             return 3
-        if s == 'W':
+        elif s == 'W':
             return 2
-        if s == 'S':
+        elif s == 'S':
             return 1
-        if s == 'E':
+        elif s == 'E':
             return 0   
 
     def part_1(self, instructions): 
@@ -62,6 +62,7 @@ arr = lines.read().splitlines()
 arr = list(map(lambda x: (x[:1], int(x[1:])), arr))
 
 day12 = Day12()
+
 print(day12.part_1(arr))
 
 print(day12.part_2(arr))
